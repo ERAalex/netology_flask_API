@@ -1,0 +1,190 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Espinosa Rozov Alex API",
+      "description": "An examples of my API that demonstrates how to use my application.",
+      "version": "1.0"
+    },
+    "basePath": "/api",
+    "schemes": [
+      "http"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/api/create_token": {
+        "post": {
+          "summary": "Returns token for user.",
+          "parameters": [
+					{
+						"in":"body",
+						"name":"login",
+						"description":"put login of user",
+						"required":true,
+						"schema":{
+							"$ref":"#"
+						}},
+                      					{
+						"in":"body",
+						"name":"password",
+						"description":"put password of user",
+						"required":true,
+						"schema":{
+							"$ref":"#"
+						}
+					}
+
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response.",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "token": {
+                    "type": "string",
+                    "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJhbGV4IiwiZXhwIjoxNjgwNDY5OTU4fQ.UM5iIMExdfT2IRrKRJUzXqmGxlEZJfOe1VeGNlWE6CY"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+
+
+
+      "/api/users": {
+        "get": {
+          "summary": "Returns all users, you need to put TOKEN on Headers",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response.",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/user/<id>": {
+        "delete": {
+          "summary": "Delete user by it's ID",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response.",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/new3": {
+        "get": {
+          "summary": "Returns a simple greeting message.",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response.",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+            "/new": {
+        "get": {
+          "summary": "Returns a simple greeting message.",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response.",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+            "/new": {
+        "get": {
+          "summary": "Returns a simple greeting message.",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response.",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/new3": {
+        "get": {
+          "summary": "Returns a simple greeting message.",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response.",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+
+      }}}
